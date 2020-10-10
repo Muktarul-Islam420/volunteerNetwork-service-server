@@ -21,7 +21,7 @@ MongoClient.connect(uri,{ useUnifiedTopology: true }, function(err, client) {
   const eventsCollection = client.db(process.env.DB_DATABASE).collection("events");
   console.log('ServiceCollection successfully');
   // perform actions on the collection object
-    app.post('/addService',(req, res) => {
+    app.post('/addProducts',(req, res) => {
         const products = req.body;
         ServiceCollection.insertMany(products)
         .then(result => {
