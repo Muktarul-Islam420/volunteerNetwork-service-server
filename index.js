@@ -25,7 +25,6 @@ MongoClient.connect(uri,{ useUnifiedTopology: true }, function(err, client) {
         const products = req.body;
         ServiceCollection.insertMany(products)
         .then(result => {
-            console.log(result.insertedCount);
             res.send(result.insertedCount)
         })
     })
@@ -96,7 +95,7 @@ MongoClient.connect(uri,{ useUnifiedTopology: true }, function(err, client) {
 
 
   app.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.send("Welcome! to our Volunteer Network Service Server")
   })
 
 
