@@ -4,12 +4,11 @@ const bodyParser = require('body-parser')
 
 require('dotenv').config();
 const port = 4000
+
 const app = express()
 app.use(cors())
 app.use(bodyParser.json())
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+
 
 
 
